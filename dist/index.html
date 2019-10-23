@@ -9,11 +9,15 @@
 </head>
 
 <body>
-    <div>
-    <input type="text" id="teamName" placeholder="What's the furniture ID?">
-    <button onclick=fetchFurnitureData()>Search</button>
-</div>
+    <div id="input-container">
+        <input type="text" id="teamNameInput" placeholder="What's the Team Name?">
+        <button onclick=fetchTeamData()>Search</button>
+    </div>
+    <div id="players-container">
+
+    </div>
     <script src="./jquery/dist/jquery.js"></script>
+    <script src="./request\request.js"></script>
     <script src="main.js"></script>
 </body>
 

@@ -1,6 +1,16 @@
-/* div{
-    width: 100px;
-    height: 100px;
-    background-color: #e67e22;
-    box-shadow: 1px 1px 3px black;
-} */
+body{
+    display: grid;
+    grid-template-rows: 1fr 9fr;
+    height: 100vh;
+}
+
+
+#input-container{
+    display: inline-block;
+}
+#teamNameInput{
+    width: 70vw;
+}
+button{
+    width: 15vw;
+}

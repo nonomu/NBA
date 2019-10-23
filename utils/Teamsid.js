@@ -4,3 +4,4 @@ const teamToIDs = {
     "heat": "1610612748",
     "suns": "1610612756"
 }
+module.exports.teamToIDs=teamToIDs
