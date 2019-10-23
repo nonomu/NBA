@@ -12,7 +12,7 @@ app.use(express.static(path.join(__dirname,'..','node_modules')))
 app.get('/teams/:teamName', function (request, response) {
         const TeamName=request.params.teamName
         console.log(teamToIDs[TeamName])
-        response.send(teamToIDs[request.params.teamName.toString()])
+        response.send(teamToIDs[TeamName])
     })
 
 
