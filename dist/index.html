@@ -6,18 +6,30 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Totally Real Site</title>
     <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.4/handlebars.js"></script>
 </head>
 
 <body>
+        <script id="players-template" type="text/x-handlebars-template">
+
+            {{#each players}}
+            <div class="player">
+                <p class="player-info">{{firstName}} {{lastName}} <br>{{jersey}} </p>
+                <img class="profile-pic" src="https://nba-players.herokuapp.com/players/{{lastName}}/{{firstName}}" > 
+                <p class="player-info">{{pos}}  </p>
+            </div>
+            {{/each}}
+         </script>
     <div id="input-container">
         <input type="text" id="teamNameInput" placeholder="What's the Team Name?">
         <button onclick=fetchTeamData()>Search</button>
     </div>
-    <div id="players-container">
+    <div class="players-container">
 
     </div>
     <script src="./jquery/dist/jquery.js"></script>
     <script src="./request\request.js"></script>
+    <script src="renderer.js"></script>
     <script src="main.js"></script>
 </body>
 

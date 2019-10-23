@@ -13,12 +13,12 @@ app.use(express.static(path.join(__dirname, '..', 'node_modules')))
 app.get('/teams/:teamName', function (req, res) {
     const TeamName = req.params.teamName
     request('http://data.nba.net/10s/prod/v1/2018/players.json', function (err, respones) {
-        let NBAdata = JSON.parse(respones.body).league.standard
-            NBAdata = NBAdata
+        let TeadData = JSON.parse(respones.body).league.standard
+            TeadData = TeadData
             .filter(d => d.teamId === teamToIDs[TeamName])
             .filter(d => d.isActive == true)
             .map(d => {return{firstName:d.firstName , lastName:d.lastName , jersey:d.jersey,pos:d.pos}})   
-            res.send(NBAdata)        
+            res.send(TeadData)        
     })
 
 })

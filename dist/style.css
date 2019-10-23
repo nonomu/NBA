@@ -3,8 +3,6 @@ body{
     grid-template-rows: 1fr 9fr;
     height: 100vh;
 }
-
-
 #input-container{
     display: inline-block;
 }
@@ -13,4 +11,22 @@ body{
 }
 button{
     width: 15vw;
+}
+.players-container{
+    display: grid;
+    grid-gap: 7px;
+    grid-template-columns: repeat(auto-fill,minmax(250px,1fr));
+}
+.player{
+    background: rgb(255, 166, 0);
+    position: relative;
+    font-size: 20px;
+    padding: 5px;
+}
+.profile-pic{
+    height: 100%;
+    width: 100%;
+}
+.player-info{
+    text-align: center;
 }
